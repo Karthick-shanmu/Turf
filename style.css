@@ -308,6 +308,70 @@ body {
     border-left: 4px solid #e74c3c;
 }
 
+/* Turf Selection Styles */
+.turf-selection {
+    margin-bottom: 2rem;
+}
+
+.turf-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+.turf-item {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 3px solid transparent;
+}
+
+.turf-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.turf-item.selected {
+    border-color: #2ecc71;
+}
+
+.turf-image {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.turf-info {
+    padding: 1rem;
+}
+
+.turf-name {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+}
+
+.turf-type {
+    color: #7f8c8d;
+    margin-bottom: 0.5rem;
+}
+
+.turf-price {
+    color: #e74c3c;
+    font-weight: bold;
+}
+
+.turf-description {
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+    color: #666;
+}
+
 /* Mobile Responsiveness */
 @media (max-width: 768px) {
     .nav-content {
@@ -353,6 +417,10 @@ body {
 
     .page-title {
         font-size: 2rem;
+    }
+
+    .turf-grid {
+        grid-template-columns: 1fr;
     }
 }
 
